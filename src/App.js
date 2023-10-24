@@ -7,7 +7,7 @@ import Card from './components/Card.js';
 function App() {
   return (
     <div className='App'>
-      {/* i components con proprs devono stare dentro un div */}
+      {/* più di un compoment devono stare dentro un root componemt come un div */}
       <Heading  firstName="Anna" />
       <Heading firstName="Giacomo" />
       <h1>Task: Add three card elements </h1>
