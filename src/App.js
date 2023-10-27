@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Heading from './components/Heading.js';
 import Card from './components/Card.js';
+import DynamicEvents from './components/DynamicEvents';
 
 
 function App() {
@@ -14,6 +15,8 @@ function App() {
       <Card h2="First card's h2" h3="First card's h3"/>
       <Card h2="Second card's h2" h3="Second card's h3"/>
       <Card h2="Third card's h2" h3="Third card's h3"/>
+      <h1>Task: add a button and handle a click event</h1>
+      <DynamicEvents />
     </div>
   );
 }
