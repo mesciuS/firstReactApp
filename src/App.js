@@ -6,6 +6,10 @@ import Card from './components/Card.js';
 import DynamicEvents from './components/DynamicEvents';
 import Fruits from './components/Fruits';
 import FruitsCounter from './components/FruitsCounter';
+import Contact from './components/Contact';
+import Homepage from './components/Homepage';
+// devo importare tutti gli elementi che voglio usare per il router, in automatico mi importa solo Routes
+import { Routes, Route, Link } from 'react-router-dom';
 
 
 function App() {
@@ -17,6 +21,17 @@ function App() {
 
   return (
     <div className='App'>
+      {/* questa è la sintassi per il routing */}
+      <nav>
+        <h1>Routing example</h1>
+        <Link to="/homepage" className='mav-item'>Home</Link>
+        <Link to="/contact" className='mav-item'>Contact</Link>
+      </nav>
+      <Routes>
+        <Route path="/homepage" element={<Homepage/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+      </Routes>
+      <hr></hr>
       {/* più di un compoment devono stare dentro un root componemt come un div */}
       <Heading  firstName="Anna" />
       <Heading firstName="Giacomo" />
