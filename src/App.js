@@ -10,9 +10,13 @@ import Contact from './components/Contact';
 import Homepage from './components/Homepage';
 // devo importare tutti gli elementi che voglio usare per il router, in automatico mi importa solo Routes
 import { Routes, Route, Link } from 'react-router-dom';
+// primo metodo import immagine ->
+import nutellino from './assets/images/nutellino.png'
 
 
 function App() {
+  // metodo 3 import immagini
+  const imgUrl = "https://media.wired.com/photos/598e35fb99d76447c4eb1f28/master/pass/phonepicutres-TA.jpg";
   const [fruits] = React.useState([
     {fruitName: 'apple', id: 1},
     {fruitName: 'apple', id: 2},
@@ -47,6 +51,14 @@ function App() {
       <h1>Where should the state go?</h1>
       <Fruits fruits={fruits}/>
       <FruitsCounter fruits={fruits}/>
+      <hr></hr>
+      <h1>images import</h1>
+      {/* metodo 1 */}
+      <img height={200} src={nutellino} alt='il nutellino' />
+      {/* metodo 2 */}
+      <img height={200} src={require('./assets/images/nutellino.png')} />
+      {/* metodo 3 */}
+      <img height={200} src={imgUrl} />
     </div>
   );
 }
