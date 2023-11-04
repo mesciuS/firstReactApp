@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import React from "react";
+import ReactPlayer from 'react-player';
 import './App.css';
 import Heading from './components/Heading.js';
 import Card from './components/Card.js';
@@ -15,6 +16,7 @@ import nutellino from './assets/images/nutellino.png'
 
 
 function App() {
+  const ehehxd = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
   // metodo 3 import immagini
   const imgUrl = "https://media.wired.com/photos/598e35fb99d76447c4eb1f28/master/pass/phonepicutres-TA.jpg";
   const [fruits] = React.useState([
@@ -59,6 +61,15 @@ function App() {
       <img height={200} src={require('./assets/images/nutellino.png')} />
       {/* metodo 3 */}
       <img height={200} src={imgUrl} />
+      <hr></hr>
+      <h1>media player</h1>
+      <ReactPlayer 
+        url={ehehxd}
+        // questo serve a stabilire se parte automaticamente o al click
+        playing={false}
+        // questo stabilisce il volume di partenza del video, questo è 50%
+        volume={0.5}
+      />
     </div>
   );
 }
